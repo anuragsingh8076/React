@@ -28,4 +28,4 @@ function EditPost() {
     </div>
   ) : null
 }
-export default E
+export default EditPost
