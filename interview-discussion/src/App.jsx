@@ -4,22 +4,38 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [value, setValue] = useState(1)
-  //const [multipliedValue, setMultipliedValue] = useState(1)
-  let multipliedValue = value * 5
+  console.log("App rendered", Math.random());
+  
+  const [value, setValue] = useState({
+    value: 0,
+  })
 
-  const multiplybyfive = () => {
-    // setMultipliedValue(value * 5)
-     setValue(value + 1)
+
+
+  //const [multipliedValue, setMultipliedValue] = useState(1)
+  //let multipliedValue = value * 5
+
+  // const multiplybyfive = () => {
+  //   // setMultipliedValue(value * 5)
+  //    setValue(value + 1)
+  // }
+
+  const clickMe = () => {
+    //console.log("logged");
+    //setValue(value + 1)
+    setValue({
+      value: 0,
+    })
+    
   }
 
   return (
     <>
-      <h1>Main value: {value}</h1>
+      <h1>Main value: {value.value}</h1>
       <button
-      onClick={multiplybyfive}
+      onClick={clickMe}
       >Click to multiply by 5</button>
-      <h2>Multiplied value: {multipliedValue}</h2>
+      {/*<h2>Multiplied value: {multipliedValue}</h2>*/}
     </>
   )
 }
